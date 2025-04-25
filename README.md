@@ -17,12 +17,12 @@ Welcome to my personal developer portfolio built with **Django** and styled usin
 
 ## 📁 Project Structure
 
- ├── portfolio/
- │ ├── templates/ 
- │ │ └── index.html 
- │ ├── static/ 
- │ │ ├── css/style.css 
- │ │ ├── js/script.js 
- │ │ └── icons/ 
- ├── manage.py 
- └── README.md
+ ├── portfolio/  
+ │ ├── templates/  
+ │ │ └── index.html  
+ │ ├── static/  
+ │ │ ├── css/style.css  
+ │ │ ├── js/script.js  
+ │ │ └── icons/  
+ ├── manage.py  
+ └── README.md  
