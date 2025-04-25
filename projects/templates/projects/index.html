@@ -1,0 +1,192 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diogo Sal</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <button id="theme-toggle" class="btn-theme fixed top-6 right-6 z-50 bg-[--surface] text-[--text] border border-[--light-teal] px-3 py-1 rounded-full text-sm shadow hover:bg-[--accent] hover:text-[color:var(--text)] transition">
+        Toggle Theme
+    </button>
+</head>
+
+<body class="bg-[color:var(--bg)] text-[color:var(--text)] font-sans leading-relaxed relative overflow-x-hidden">
+    <div id="custom-cursor"></div>
+
+    <!-- Background Gradient Overlay -->
+    <div class="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
+        <div class="absolute w-[500px] h-[500px] bg-[color:var(--bg)] opacity-10 blur-3xl rounded-full top-[-150px] left-[-150px]"></div>
+        <div class="absolute w-[400px] h-[400px] bg-[color:var(--bg)] opacity-10 blur-2xl rounded-full bottom-[-100px] right-[-100px]"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex flex-col justify-center items-start px-6 md:px-20 py-20 relative z-10">
+        <canvas id="rippleCanvas" class="absolute top-0 left-0 w-full h-full mix-blend-lighten z-0 pointer-events-none"></canvas>
+        <div class="max-w-3xl">
+            <h1 id="hero-title" class="text-5xl md:text-6xl font-extrabold text-[color:var(--text)] mb-4 leading-tight">
+                Hey, I'm <span class="text-[--light-teal]">Sal</span>.
+            </h1>
+            <p class="text-xl text-[color:var(--text)]-300 max-w-xl mb-6">I'm a developer who crafts clean, expressive web applications with Django & Python. I turn ideas into powerful, beautiful tools.</p>
+            <a href="#projects" class="bg-[color:var(--surface)] text-[color:var(--text)] px-6 py-3 rounded-full shadow-lg hover:bg-[--accent] transition">Explore My Work</a>
+        </div>
+    </section>
+
+    <div class="w-full h-1 bg-gradient-to-r from-[--light-teal] via-[--dark-teal] to-[--light-teal] my-16 rounded-full"></div>
+
+    <!-- About Section -->
+    <section class="relative py-28 px-6 md:px-20 z-10">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-[color:var(--text)] mb-12">Get to Know Me</h2>
+    
+            <!-- Tabs -->
+            <div class="flex justify-center gap-4 mb-10">
+                <button class="tab-btn bg-[color:var(--surface)] text-[color:var(--text)] px-4 py-2 rounded-full border border-[--light-teal] hover:bg-[--accent] transition active" data-tab="personal">Personal</button>
+                <button class="tab-btn bg-[color:var(--surface)] text-[color:var(--text)] px-4 py-2 rounded-full border border-[--light-teal] hover:bg-[--accent] transition" data-tab="technical">Technical</button>
+                <button class="tab-btn bg-[color:var(--surface)] text-[color:var(--text)] px-4 py-2 rounded-full border border-[--light-teal] hover:bg-[--accent] transition" data-tab="passion">Passion</button>
+            </div>
+    
+            <!-- Tab Content -->
+            <div class="tab-content space-y-6">
+                <div class="tab-pane" id="tab-personal">
+                    <p class="text-lg text-[color:var(--text)]-300 leading-loose">
+                        I’m 26 and currently finishing my IT degree in Portugal. Before that, I completed a 2-year technical course in networking. My passion for tech started early, and over time it evolved from curiosity into career focus.
+                    </p>
+                </div>
+                <div class="tab-pane hidden" id="tab-technical">
+                    <p class="text-lg text-[color:var(--text)]-300 leading-loose">
+                        I’ve worked mostly on backend systems using <span class="text-[--light-teal] font-semibold">Python</span>, <span class="text-[--light-teal] font-semibold">Django</span>, <span class="text-[--light-teal] font-semibold">Java</span>, and <span class="text-[--light-teal] font-semibold">.NET</span>. From APIs to database-driven apps, I enjoy building scalable solutions. I’m comfortable with databases like <span class="text-[--light-teal] font-semibold">PostgreSQL</span>, <span class="text-[--light-teal] font-semibold">MongoDB</span>, and more.
+                    </p>
+                </div>
+                <div class="tab-pane hidden" id="tab-passion">
+                    <p class="text-lg text-[color:var(--text)]-300 leading-loose">
+                        Solving problems is my favorite part of development. I love diving into bugs and building things from scratch. Whether I’m coding APIs or refining backend logic, I do it because I enjoy the challenge. I know I’m in the right place — I love what I do.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Stack Section -->
+        <section id="tech" class="py-24 px-6 md:px-20 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center text-[color:var(--text)] mb-16">Tech Stack</h2>
+
+                <div class="grid md:grid-cols-2 gap-10">
+                    <!-- Group: Languages -->
+                    <div class="tech-group bg-[color:var(--surface)] p-6 rounded-2xl border border-[--light-teal] shadow-md">
+                        <h3 class="text-xl font-semibold text-[--light-teal] mb-4">Languages</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="stack-icon"><img src="/static/icons/python.svg" alt="Python"><span></span></div>
+                            <div class="stack-icon"><img src="/static/icons/javascript.svg" alt="JavaScript"><span></span></div>
+                            <div class="stack-icon"><img src="/static/icons/typescript.svg" alt="TypeScript"><span></span></div>
+                            <div class="stack-icon"><img src="/static/icons/java.svg" alt="Java"><span></span></div>
+                        </div>
+                    </div>
+        
+                    <!-- Group: Frameworks -->
+                    <div class="tech-group bg-[color:var(--surface)] p-6 rounded-2xl border border-[--light-teal] shadow-md">
+                        <h3 class="text-xl font-semibold text-[--light-teal] mb-4">Frameworks</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="stack-icon"><img src="/static/icons/django.svg" alt="Django"></div>
+                            <div class="stack-icon"><img src="/static/icons/flask.svg" alt="Flask"></div>
+                            <div class="stack-icon"><img src="/static/icons/nodejs.svg" alt="Node"></div>
+                            <div class="stack-icon"><img src="/static/icons/dotnet.svg" alt="dotNet"></div>
+                        </div>
+                    </div>
+            
+                    <!-- Group: Databases -->
+                    <div class="tech-group bg-[color:var(--surface)] p-6 rounded-2xl border border-[--light-teal] shadow-md">
+                        <h3 class="text-xl font-semibold text-[--light-teal] mb-4">Databases</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="stack-icon"><img src="/static/icons/postgresql.svg" alt="PostgreSQL"></div>
+                            <div class="stack-icon"><img src="/static/icons/mongodb.svg" alt="MongoDB"></div>
+                            <div class="stack-icon"><img src="/static/icons/mariadb.svg" alt="MariaDB"></div>
+                            <div class="stack-icon"><img src="/static/icons/sqlserver.svg" alt="SQLServer"></div>
+                        </div>
+                    </div>
+            
+                    <!-- Group: Tools -->
+                    <div class="tech-group bg-[color:var(--surface)] p-6 rounded-2xl border border-[--light-teal] shadow-md">
+                        <h3 class="text-xl font-semibold text-[--light-teal] mb-4">Tools</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="stack-icon"><img src="/static/icons/git.svg" alt="Git"></div>
+                            <div class="stack-icon"><img src="/static/icons/notion.svg" alt="Notion"></div>
+                            <div class="stack-icon"><img src="/static/icons/api.svg" alt="APIs"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <div class="w-full h-1 bg-gradient-to-r from-[--light-teal] via-[--dark-teal] to-[--light-teal] my-16 rounded-full"></div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 md:px-20 relative z-10">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-[color:var(--text)] mb-16">Selected GitHub Projects</h2>
+
+            <!-- Initial 4 Projects -->
+            <div class="grid gap-10 grid-cols-1 md:grid-cols-2">
+                {% for repo in github_repos|slice:":4" %}
+                    <div class="project-card bg-[color:var(--surface)] p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-transform duration-300 hover:scale-105 border-t-4 border-[--light-teal]">
+                        <h3 class="text-2xl font-semibold mb-2 text-[color:var(--text)]">{{ repo.name }}</h3>
+                        <p class="text-[color:var(--text)]-300 mb-3">{{ repo.description }}</p>
+                        <div class="text-sm text-[color:var(--text)]-400 mb-1">Language: {{ repo.language }}</div>
+                        <div class="text-sm text-[color:var(--text)]-500">Updated: {{ repo.updated_at|date:'Y-m-d' }}</div>
+                        <a href="{{ repo.html_url }}" target="_blank" class="text-[--light-teal] mt-3 inline-block font-medium hover:text-[--dark-teal]">View on GitHub →</a>
+                    </div>
+                {% endfor %}
+            </div>
+            
+            <!-- Extra Projects (hidden initially) -->
+            <div id="extra-projects-wrapper" class="grid grid-cols-1 md:grid-cols-2 gap-10 pt-10 hidden">
+                {% for repo in github_repos|slice:"4:8" %}
+                    <div class="extra-card opacity-0 translate-y-6 bg-[color:var(--surface)] p-6 rounded-2xl shadow-xl border-t-4 border-[--light-teal] transition-all duration-500 ease-out hover:scale-105 hover:shadow-2xl transform">
+                        <h3 class="text-2xl font-semibold mb-2 text-[color:var(--text)]">{{ repo.name }}</h3>
+                        <p class="text-[color:var(--text)]-300 mb-3">{{ repo.description }}</p>
+                        <div class="text-sm text-[color:var(--text)]-400 mb-1">Language: {{ repo.language }}</div>
+                        <div class="text-sm text-[color:var(--text)]-500">Updated: {{ repo.updated_at|date:'Y-m-d' }}</div>
+                        <a href="{{ repo.html_url }}" target="_blank" class="text-[--light-teal] mt-3 inline-block font-medium hover:text-[--dark-teal]">View on GitHub →</a>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <!-- Button -->
+            <div class="text-center mt-12">
+                <button id="show-more-btn" class="bg-[color:var(--surface)] rounded-full border border-[--light-teal] hover:bg-[--accent] text-[color:var(--text)] px-6 py-3 rounded-full font-medium transition">Show More Projects</button>
+            </div>
+        </div>
+    </section>
+    
+    <div class="w-full h-1 bg-gradient-to-r from-[--light-teal] via-[--dark-teal] to-[--light-teal] my-16 rounded-full"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 md:px-20 relative z-10">
+        <div class="relative">
+            <canvas id="rippleCanvasContact" class="absolute top-0 left-0 w-full h-full mix-blend-lighten pointer-events-none z-0"></canvas>
+            <div class="max-w-3xl mx-auto text-center relative z-10">
+                <h2 class="text-4xl font-bold mb-6 text-[color:var(--text)]">Let's Connect</h2>
+                <p class="text-lg text-[color:var(--text)]-300 mb-8">
+                    I'm always up for interesting collaborations or just geeking out about code.
+                    Feel free to drop a message or check out my work:
+                </p>
+                <div class="flex justify-center gap-8 text-[--light-teal] font-medium text-lg">
+                    <a href="mailto:diogosal1998@gmail.com" class="hover:underline">Email</a>
+                    <a href="https://github.com/friendtm" target="_blank" class="hover:underline">GitHub</a>
+                    <a href="https://www.linkedin.com/in/diogo-sal-316714230/" target="_blank" class="hover:underline">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spacer to prevent cursor cutoff on bottom -->
+    <div style="height: 10vh;"></div>
+
+    <script src="{% static 'js/script.js' %}" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</body>
+</html>
