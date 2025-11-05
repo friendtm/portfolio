@@ -1,21 +1,21 @@
-# 🧑‍💻 Diogo Sal — Developer Portfolio
+# Diogo Sal — Developer Portfolio
 
 Welcome to my personal developer portfolio built with **Django** and styled using **TailwindCSS**. This site showcases selected GitHub projects, my tech stack, and background — all wrapped in a dynamic and animated single-page experience.
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🎨 Custom dark/light mode with accent highlight
-- 🌀 Interactive ripple background effects (Canvas)
-- 🎯 Animated section transitions and cursor effects
-- 🧠 Tabbed About section with personal, technical & passion segments
-- 💻 Dynamic project grid (pulls from GitHub)
-- 🔧 Tech stack icons with scroll-triggered animation
+- Custom dark/light mode with accent highlight
+- Interactive ripple background effects (Canvas)
+- Animated section transitions and cursor effects
+- Tabbed About section with personal, technical & passion segments
+- Dynamic project grid (pulls from GitHub)
+- Tech stack icons with scroll-triggered animation
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 .
@@ -32,7 +32,7 @@ Welcome to my personal developer portfolio built with **Django** and styled usin
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Backend:** Python 3, Django
 - **Frontend:** HTML, TailwindCSS, JavaScript (Vanilla), GSAP for animations
@@ -41,7 +41,7 @@ Welcome to my personal developer portfolio built with **Django** and styled usin
 
 ---
 
-## 🧪 How to Run Locally
+## How to Run Locally
 
 1. **Clone the repo:**
 
@@ -73,7 +73,7 @@ Open your browser and go to [http://localhost:8000](http://localhost:8000)
 
 ---
 
-## 📷 Screenshots
+## Screenshots
 
 | Dark Mode | Light Mode |
 |-----------|------------|
@@ -81,13 +81,13 @@ Open your browser and go to [http://localhost:8000](http://localhost:8000)
 
 ---
 
-## 📝 License
+## License
 
 This project is for educational and portfolio purposes only.
 
 ---
 
-## 🙋‍♂️ Author
+## Author
 
 **Diogo Sal**  
 Back-end focused developer based in Portugal  
